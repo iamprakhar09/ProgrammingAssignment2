@@ -1,11 +1,12 @@
 
-makeCacheMatrix <- function( x = matrix())
+
 ## This function, makeCacheMatrix creates a special "matrix", which is really a list containing a function to
 ##set the value of the original matirx
 ##get the value of the original matirx
 ##set the value of the inverse matrix
 ##get the value of the inverse matrix
 
+makeCacheMatrix <- function( x = matrix()) {
      m <- NULL
      set <- function(y) {
           x <<- y
@@ -18,7 +19,7 @@ makeCacheMatrix <- function( x = matrix())
           setinv = setinv,
           getinv = getinv)
 }
-}
+
 
 
 ## The following function calculates the inverse of the special "matrix" created with the above function.
